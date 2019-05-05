@@ -10,8 +10,9 @@ namespace Personne
 {
     static void Main(string[] args)
     {
-        Personne + 1 = new Personne
+        var personne = new Personne();
     }
+
     public class Personne
     {           // ci dessous les créations des variables, nom, prenom, age, declarées visible par d'autres systemes en dehors du systeme...
         public string nom;
