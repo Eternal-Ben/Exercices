@@ -17,44 +17,51 @@ namespace HelloWord
     {
         static void Main(string[] args)
         {
-            var date = DateTime.Now;
-            string administrateur = "gtm@gmail.com";
-            Console.WriteLine($"\n{date}\nVotre identifiant qui est votre prenom, je vous pries :");
+            string aurevoir = "\nEn souhaitant vous revoir très prochainement, à tres bientôt !",
+                   administrateur = "acme@gmail.com",
+                   peche = "\nAllons pêcher ça faisait un moment que ça me trotte dans la tete .!",
+                   armoir = "\nAller qu'est ce qu'il y a dans cette armoire...";
+
             var presentation = Console.ReadLine();
-            List<string> users = new List<string> { "Alex", "Ana", "Felipe"};
-            //(string, bool) quitter = (Console.ReadLine(), "q" is "Q");
+            var date = DateTime.Now;
+            var nom = $"\n{date}\nVotre identifiant qui est votre prenom, je vous pries :";
+            var bienvenu = $"\nBienvenu {presentation}, veuillez entrez votre mot de passe {date}:";
+            var mdp = Console.ReadLine();
+            var denicherb = "\nDennicher de bonnes affaire ? Oui tout de suite.";
+            var souhait = $"\n\nQue souhaitez vous réaliser aujourd'hui {presentation}?";
+            var interdiction = $"\n\aVous n'êtes pas autoriser à acceder à ce site, veuillez prendre contact avec notre administrateur, {administrateur}!";
+            List<string> clees = new List<string> {"root","toor","UserCom" };
+            List<string> users = new List<string> { "Alex", "Thierry", "Felipe"};
+
             bool quitter = "q" is "Q";
 
-            foreach (string user in users)
-                
-                if (presentation != user)
-                {
-                    Console.Clear();
 
-                    Console.WriteLine($"\n\aVous n'êtes pas autoriser à acceder à ce site, veuillez vous prendre contact avec notre administrateur, {administrateur}!");
-                    Console.WriteLine("");
-                    Console.WriteLine("");
-                    Console.WriteLine($"\n{date}");
-                    Console.ReadKey();
-                }
-                else
-                {
+            Console.WriteLine($"{nom}");
+            var key = "root";
+            foreach (string clee in clees)
+                if (clee == key)
+                    foreach (string user in users)
 
-                    Console.Clear();
-                    Console.Beep(3000, 90);
-                    Console.Beep(3900, 90);
-                    Console.Beep(4100, 190);
-
-                    Console.WriteLine($"\nBienvenu {presentation}, veuillez entrez votre mot de passe {date}");
-                    string mdp = Console.ReadLine();
-                    var clees = new List<string> { "root", "toor", "UserCom" };
-
-                    foreach (var clee in clees)
-                        if (mdp != clee)
+                        if (nom != user)
                         {
                             Console.Clear();
+                            Console.WriteLine($"{interdiction}");
+                            Console.WriteLine("");
+                            Console.WriteLine($"\n{date}");
+                            Console.ReadKey();
+                        }
+                        else
+                        {
 
-                            Console.WriteLine($"\n\nQue souhaitez vous réaliser aujourd'hui {presentation}?");
+                            Console.Clear();
+                            Console.Beep(3000, 90);
+                            Console.Beep(3900, 90);
+                            Console.Beep(4100, 190);
+                            Console.WriteLine($"{bienvenu}");
+                        }
+                        {
+                            Console.Clear();
+                            Console.WriteLine($"{souhait}");
                             Console.WriteLine("1 . Visualiser : 1"); // faire une liste de consultation de client et de voyage en mode sql
                             Console.WriteLine("2 . Dénicher   : 2"); // idem ci dessus liste de voyage en dispo avec liste de client acheteur
                             Console.WriteLine("3 . Prospecter : 3"); // liste client potentiel et voyage dispo avec promo enfant 12 ans et liste tranche d'age etc via sql ?
@@ -64,35 +71,32 @@ namespace HelloWord
                             Console.WriteLine("");
                             Console.WriteLine("");
 
-                            int choixMenu = Console.Read();
-                            switch (choixMenu)
-                            {
-                                case 1:
-                                    Console.WriteLine("\nAller qu'est ce qu'il y a dans cette armoire...");
-									//new LeVoyage();
-									Voyage.menu(); // attention au "static" dans la methode, menu.
-									/* var monobjet = new Voyage(); // instancier "minobjet" pour la creation */
-
-
-                                    break;
+                                int choixMenu = Console.Read();
+                                switch (choixMenu)
+                                {
+                                    case 1:
+                                        Console.WriteLine($"{armoir}");
+									    //new LeVoyage();
+									    Voyage.menu(); // attention au "static" dans la methode, menu.
+                                                       /* var monobjet = new Voyage(); // instancier "minobjet" pour la creation */
+                                        break;
                                 case 2:
-                                    Console.WriteLine("\nDennicher de bonnes affaire ? Oui tout de suite.");
-                                    break;
+                                        Console.WriteLine($"{denicherb}");
+                                        break;
                                 case 3:
-                                    Console.WriteLine("\nAllons pêcher ça faisait un que ça me trote dans la tete .!");
-                                    break;
-                                case 4 when quitter:
+                                        Console.WriteLine($"{peche}");
+                                        break;
+                                case 4 when "q"is "Q":
 
                                 default:
-                                    Console.WriteLine($"\nEn souhaitant vous revoir très prochainement, à tres bientôt !");
-                                    Console.WriteLine("");
-                                    Console.WriteLine("");
-                                    Console.WriteLine($"\n{date}");
-                                    break;
-                            }
+                                        Console.WriteLine($"{aurevoir}");
+                                        Console.WriteLine("");
+                                        Console.WriteLine("");
+                                        Console.WriteLine($"\n{date}");
+                                        break;
+                                }
                         }
-                }
+         
         }
     }
 }
-
