@@ -17,30 +17,31 @@ namespace HelloWord
     {
         static void Main(string[] args)
         {
+            List<string> listUsers = new List<string> { "Alex", "Thierry", "Felipe" };
+            List<string> listKeys = new List<string> { "root", "toor", "admin" };
+            // A revoir sur la partie user et entre sur site.
+            bool users = listUsers<string>.Contains(users "Thierry");
+            bool keys = listKeys;
+            var date = DateTime.Now;
+
             string aurevoir = "\nEn souhaitant vous revoir très prochainement, à tres bientôt !",
                    administrateur = "acme@gmail.com",
                    peche = "\nAllons pêcher ça faisait un moment que ça me trotte dans la tete .!",
-                   armoir = "\nAller qu'est ce qu'il y a dans cette armoire...";
-
-            var presentation = Console.ReadLine();
-            var date = DateTime.Now;
-            var nom = $"\n{date}\nVotre identifiant qui est votre prenom, je vous pries :";
-            var bienvenu = $"\nBienvenu {presentation}, veuillez entrez votre mot de passe {date}:";
-            var mdp = Console.ReadLine();
-            var denicherb = "\nDennicher de bonnes affaire ? Oui tout de suite.";
-            var souhait = $"\n\nQue souhaitez vous réaliser aujourd'hui {presentation}?";
-            var interdiction = $"\n\aVous n'êtes pas autoriser à acceder à ce site, veuillez prendre contact avec notre administrateur, {administrateur}!";
-            List<string> clees = new List<string> {"root","toor","UserCom" };
-            List<string> users = new List<string> { "Alex", "Thierry", "Felipe"};
+                   armoir = "\nAller qu'est ce qu'il y a dans cette armoire...",
+                   mdp = Console.ReadLine(),
+                   presentation = Console.ReadLine(),
+                   personalKey = "root",
+                   nom = $"\n{date}\nVotre identifiant qui est votre prenom, je vous pries :",
+                   bienvenu = $"\nBienvenu {presentation}, veuillez entrez votre mot de passe {date}:",
+                   denicherb = "\nDennicher de bonnes affaire ? Oui tout de suite.",
+                   souhait = $"\n\nQue souhaitez vous réaliser aujourd'hui {presentation}?",
+                   interdiction = $"\n\aVous n'êtes pas autoriser à acceder à ce site, veuillez prendre contact avec notre administrateur, {administrateur}!";
 
             bool quitter = "q" is "Q";
 
 
+
             Console.WriteLine($"{nom}");
-            var key = "root";
-            foreach (string clee in clees)
-                if (clee == key)
-                    foreach (string user in users)
 
                         if (nom != user)
                         {
