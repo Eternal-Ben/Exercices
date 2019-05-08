@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace LesConditions
 {
@@ -10,23 +6,30 @@ namespace LesConditions
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Entrer le nombre entier");
-            int entier = int.Parse(Console.ReadLine());
+            string sQuestion = "Entrer votre age",
+                   sMajeur = "Vous êtes majeur",
+                   sMineur = "Vous êtes mineur",
+                   sChrist = "et avez depassé l'esperence de vie du Christ, Bravo !";
 
-            if (entier > 0)
+            Console.WriteLine($"{sQuestion}");
+            int iAge = int.Parse(Console.ReadLine());
+            int iAgeChrist = 30,
+                iAgeMajeur = 18;
+
+            if (iAge > iAgeChrist)
             {
-                Console.WriteLine("Nombre positif");
+                Console.WriteLine(($"{sMajeur}") + ($"{sChrist}"));
             }
-            else if (entier < 0)
+            else if (iAge >= iAgeMajeur)
             {
-                Console.WriteLine("Nombre négatif");
+                Console.WriteLine($"{sMajeur}");
             }
             else
             {
-                Console.WriteLine("Rien à dire");
+                if (iAge < iAgeMajeur)
+                    Console.WriteLine($"{sMineur}");
             }
             Console.ReadKey(true);
-
         }
     }
 }
