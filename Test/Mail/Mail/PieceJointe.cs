@@ -25,11 +25,13 @@ namespace Mail
     }
     public class Email
     {
+        public DateTime DateAjout { get; set; }
 
+        public List<Email> Emails { get; set; }
     }
     public class DateTime
     {
-
+        public DateTime DateAjout { get; set; }
     }
     public class Files
     {
