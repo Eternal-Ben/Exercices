@@ -12,21 +12,23 @@ namespace ListeSimple
         static void Main(string[] args)
         {
             var FicheDePersonne = new List<string>();
+            string nom = "Votre nom ?",
+                   prenom = "Votre prenom?",
+                   age = "Votre Age?";
 
-            Console.WriteLine("Nom?");
+            Console.WriteLine($"{nom}");
             FicheDePersonne.Add(Console.ReadLine());
             Console.Clear();
 
-            Console.WriteLine("Prenom?");
+            Console.WriteLine($"{prenom}");
             FicheDePersonne.Add(Console.ReadLine());
             Console.Clear();
 
-            Console.WriteLine("Age?");
+            Console.WriteLine($"{age}");
             FicheDePersonne.Add(Console.ReadLine());
             Console.Clear();
-
-            Console.WriteLine("Bonjour " + FicheDePersonne[1] + " " + FicheDePersonne[0] + ",\nTu as " + FicheDePersonne[2] + " " + "ans.");
-
+            // FicheDePersonne+[index] >> [] l'index apl l'objet referencé dans la la liste
+            Console.WriteLine("Bonjour Monsieur, " + FicheDePersonne[1] + " " + FicheDePersonne[0] + ",\nVous avez " + FicheDePersonne[2] + " " + "ans.");
 
             Console.ReadKey();
         }
