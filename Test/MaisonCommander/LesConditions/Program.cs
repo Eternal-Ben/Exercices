@@ -6,14 +6,14 @@ namespace LesConditions
     {
         static void Main(string[] args)
         {
-            string sQuestion = "Entrer votre age",
+            string sQuestion = "Entrer votre âge",
                    sMajeur = "Vous êtes majeur",
                    sMineur = "Vous êtes mineur",
                    sChrist = "et avez depassé l'esperence de vie du Christ, Bravo !";
 
             Console.WriteLine($"{sQuestion}");
-            int iAge = int.Parse(Console.ReadLine());
-            int iAgeChrist = 30,
+            int iAge = int.Parse(Console.ReadLine()),
+                iAgeChrist = 30,
                 iAgeMajeur = 18;
 
             if (iAge > iAgeChrist)
