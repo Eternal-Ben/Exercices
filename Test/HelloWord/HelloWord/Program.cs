@@ -8,10 +8,7 @@ namespace HelloWord
     {
         static void Main(string[] args)
         {
-            List<string> listUsers = new List<string> { "Alex", "Thierry", "Felipe" },
-                         listKeys = new List<string> { "root", "toor", "admin" };
-
-            bool key = Convert.ToBoolean(listKeys), // verif methode de convertsur bool et string ou convertion d'autre type...
+            bool key = Convert.ToBoolean(listKeys),
                  user = Convert.ToBoolean(listUsers),
                  pass = key && user,
                  quitter = "q" is "Q";
@@ -22,22 +19,61 @@ namespace HelloWord
                    administrateur = "acme@gmail.com",
                    peche = "\nAllons pêcher ça faisait un moment que ça me trotte dans la tete .!",
                    armoir = "\nAller qu'est ce qu'il y a dans cette armoire...",
-                   mdp = Console.ReadLine(),
-                   presentation = Console.ReadLine(),
-                   personalKey = "root",
-                   nom = $"\n{date}\nVous êtes dans un espace privé, veuillez préciser votre prénom je vous pries :",
-                   bienvenu = $"\nBienvenu {presentation}, veuillez entrez votre mot de passe {date}:",
+                   mdp="",
+                   nom="",
                    denicherb = "\nDennicher de bonnes affaire ? Oui tout de suite.",
-                   souhait = $"\n\nQue souhaitez vous réaliser aujourd'hui {presentation}?",
-                   interdiction = $"\n\aVous n'êtes pas autoriser à acceder à ce site, veuillez prendre contact avec notre administrateur, {administrateur}!";
-        }
-        string Message() // refac en class et recup les declarations d'objet adequat
-        {
-            var menu = new Menu();
-            Console.Clear();
-            Console.WriteLine($"{nom}", + $"{bienvenu}");
+                   souhait = $"\n\nQue souhaitez vous réaliser aujourd'hui {nom}?",
+                   interdiction = $"\n\aVous n'êtes pas autoriser à acceder à ce site, veuillez prendre contact avec notre administrateur, {administrateur}!",
+                   presentation = $"\n{date}\nVous êtes dans un espace privé, veuillez préciser votre prénom je vous pries :",
+                   bienvenu = $"\nBienvenu {presentation}, veuillez entrez votre mot de passe {date}:";
 
-            if (Convert.ToBoolean(nom) != pass)
+            string Users() // refac en class et recup les declarations d'objet adequat
+            {
+                List<string> listUsers = new List<string> { "Alex", "Thierry", "Felipe" };
+                if (listUsers)
+                {
+                    return user;
+                }
+            }
+                List<string> listKeys = new List<string> { "root", "toor", "admin" };
+                Console.WriteLine($"{presentation}");
+                nom = Console.ReadLine();
+                Console.WriteLine($"{bienvenu}");
+                mdp = Console.ReadLine();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                if (mdp &&  )
             {
                 Console.WriteLine($"{interdiction}");
                 Console.WriteLine("");
@@ -50,7 +86,7 @@ namespace HelloWord
             }
         }
 
-        string Menu() // refac en class
+            string Menu() // refac en class
         {
                 Console.Clear();
                 Console.Beep(3000, 90);
@@ -85,7 +121,6 @@ namespace HelloWord
                         Console.WriteLine($"{peche}");
                         break;
                     case 4 when "q" is "Q":
-
                     default:
                         Console.WriteLine($"{aurevoir}");
                         Console.WriteLine("");
@@ -94,7 +129,6 @@ namespace HelloWord
                         break;
                 }
             }
-
         }
     }
 }

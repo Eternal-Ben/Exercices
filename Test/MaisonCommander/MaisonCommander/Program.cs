@@ -11,11 +11,13 @@ namespace ListeSimple
     {
         static void Main(string[] args)
         {
+            // Declaration des variables de la classe Main
             var FicheDePersonne = new List<string>();
-            string nom = "Votre nom ?",
+            string nom = "Votre nom?",
                    prenom = "Votre prenom?",
                    age = "Votre Age?";
 
+            // Affichage (par index) et récupération des données via la console
             Console.WriteLine($"{nom}");
             FicheDePersonne.Add(Console.ReadLine());
             Console.Clear();
@@ -27,7 +29,8 @@ namespace ListeSimple
             Console.WriteLine($"{age}");
             FicheDePersonne.Add(Console.ReadLine());
             Console.Clear();
-            // FicheDePersonne+[index] >> [] l'index apl l'objet referencé dans la la liste
+
+            //Affichage sur l'ecran console de la liste FicheDePersonne + Index([i = 0, i=<i, index++]). L'indexation apl l'objet reférencé en memoire du même nom dans la liste des variables déclarées
             Console.WriteLine("Bonjour Monsieur, " + FicheDePersonne[1] + " " + FicheDePersonne[0] + ",\nVous avez " + FicheDePersonne[2] + " " + "ans.");
 
             Console.ReadKey();
