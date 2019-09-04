@@ -4,15 +4,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Exo_Creation_d_une_liste_simple;
 
-namespace ListeSimple
+namespace Exo_Creation_d_une_liste_simple
 {
-    class Program
+    class Depart
     {
-        static void Main(string[] args)
+        public string Depart()
         {
             // Declaration des variables de la classe Main
-            var FicheDePersonne = new List<string>();
+            List<string> FicheDePersonne = new List<string>();
             string nom = "Votre nom?",
                    prenom = "Votre prenom?",
                    age = "Votre Age?";
@@ -34,6 +35,16 @@ namespace ListeSimple
             Console.WriteLine("Bonjour Monsieur, " + FicheDePersonne[1] + " " + FicheDePersonne[0] + ",\nVous avez " + FicheDePersonne[2] + " " + "ans.");
 
             Console.ReadKey();
+        }
+            return Depart(d);
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string d = new Depart(); //ajouter le bon namespace pour trouver la methode.
+            Console.WriteLine(d);
+            //return Depart;
         }
     }
 }

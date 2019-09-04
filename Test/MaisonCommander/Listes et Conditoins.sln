@@ -5,7 +5,13 @@ VisualStudioVersion = 15.0.27703.2047
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exo creation d'une liste simple", "MaisonCommander\Exo creation d'une liste simple.csproj", "{3A3FF5BB-7094-4FAA-AB91-4122EC0C02CA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LesConditions", "LesConditions\LesConditions.csproj", "{71D594C5-37C4-4622-A34F-8DC32164D183}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "La Condition if else", "LesConditions\La Condition if else.csproj", "{71D594C5-37C4-4622-A34F-8DC32164D183}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exo Creation d'une liste simple 2", "Exo Creation d'une liste simple 2\Exo Creation d'une liste simple 2.csproj", "{5C6A57A0-D649-41F1-919B-083DC73EDDD4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "La structure switch", "La structure switch\La structure switch.csproj", "{0AD3C622-9350-4669-887F-246BD9B5C06B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "conditions avec appel de methode", "conditions avec appel de methode\conditions avec appel de methode.csproj", "{0F92A293-C2A0-4F38-9927-618981961952}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +27,18 @@ Global
 		{71D594C5-37C4-4622-A34F-8DC32164D183}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{71D594C5-37C4-4622-A34F-8DC32164D183}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{71D594C5-37C4-4622-A34F-8DC32164D183}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5C6A57A0-D649-41F1-919B-083DC73EDDD4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C6A57A0-D649-41F1-919B-083DC73EDDD4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C6A57A0-D649-41F1-919B-083DC73EDDD4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C6A57A0-D649-41F1-919B-083DC73EDDD4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0AD3C622-9350-4669-887F-246BD9B5C06B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0AD3C622-9350-4669-887F-246BD9B5C06B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0AD3C622-9350-4669-887F-246BD9B5C06B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0AD3C622-9350-4669-887F-246BD9B5C06B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0F92A293-C2A0-4F38-9927-618981961952}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0F92A293-C2A0-4F38-9927-618981961952}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0F92A293-C2A0-4F38-9927-618981961952}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0F92A293-C2A0-4F38-9927-618981961952}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

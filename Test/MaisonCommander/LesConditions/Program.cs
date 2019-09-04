@@ -1,35 +1,34 @@
 ﻿using System;
 
-namespace LesConditions
+namespace La_Condition_if_else
 {
     class Program
     {
         static void Main(string[] args)
         {
-            string sQuestion = "Entrer votre âge",
-                   sMajeur = "Vous êtes majeur",
-                   sMineur = "Vous êtes mineur",
-                   sChrist = "et avez depassé l'esperence de vie du Christ, Bravo !";
+            // intitialisation du boolean non avec une valeure à false
+            // bool non = false;
 
-            Console.WriteLine($"{sQuestion}");
-            int iAge = int.Parse(Console.ReadLine()),
-                iAgeChrist = 30,
-                iAgeMajeur = 18;
+            Console.WriteLine("Etes vous majeur ?");
+            // bool reponse = Convert.ToBoolean(Console.ReadLine());
+            var reponse = Console.ReadLine();
+            string non = "non";
 
-            if (iAge > iAgeChrist)
+
+            //Condition if else voir meme if aurait out etre apliqué ici...
+            if (non == reponse)
             {
-                Console.WriteLine(($"{sMajeur}") + ($"{sChrist}"));
-            }
-            else if (iAge >= iAgeMajeur)
-            {
-                Console.WriteLine($"{sMajeur}");
+                Console.WriteLine("Désolé mon enfant, tu n'es pas majeur. A bientôt.");
+                Console.ReadKey();
             }
             else
             {
-                if (iAge < iAgeMajeur)
-                    Console.WriteLine($"{sMineur}");
+                Console.WriteLine("Bienvenu !");
+                Console.ReadKey();
             }
-            Console.ReadKey(true);
+                Console.Clear();
         }
     }
 }
+
+// * declaration des vaeriables en var et en string plutôt quand boolean pour simplifier le code ; à tester une fois reconnecté au net.

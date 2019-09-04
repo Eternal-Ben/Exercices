@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-//using System.Linq;
+using System.Linq;
 
 namespace HelloWord
 {
@@ -19,27 +19,55 @@ namespace HelloWord
                    administrateur = "acme@gmail.com",
                    peche = "\nAllons pêcher ça faisait un moment que ça me trotte dans la tete .!",
                    armoir = "\nAller qu'est ce qu'il y a dans cette armoire...",
-                   mdp="",
-                   nom="",
+                   mdp = "",
+                   nom = "",
                    denicherb = "\nDennicher de bonnes affaire ? Oui tout de suite.",
                    souhait = $"\n\nQue souhaitez vous réaliser aujourd'hui {nom}?",
                    interdiction = $"\n\aVous n'êtes pas autoriser à acceder à ce site, veuillez prendre contact avec notre administrateur, {administrateur}!",
                    presentation = $"\n{date}\nVous êtes dans un espace privé, veuillez préciser votre prénom je vous pries :",
                    bienvenu = $"\nBienvenu {presentation}, veuillez entrez votre mot de passe {date}:";
+        }
 
-            string Users() // refac en class et recup les declarations d'objet adequat
+        class Users
+        {
+            List<string> listUsers = new List<string> { "Alex", "Thierry", "Felipe" };
+            string youser = Console.ReadLine();
+            public string UserEntry(string youser)
             {
-                List<string> listUsers = new List<string> { "Alex", "Thierry", "Felipe" };
-                if (listUsers)
-                {
-                    return user;
-                }
+                Console.WriteLine("Votre prenom ?");
+                return UserEntry(youser);
             }
-                List<string> listKeys = new List<string> { "root", "toor", "admin" };
-                Console.WriteLine($"{presentation}");
-                nom = Console.ReadLine();
-                Console.WriteLine($"{bienvenu}");
-                mdp = Console.ReadLine();
+            public string UserAgree (string users, string youser)
+            {
+                if (youser != users)
+                {
+                    Console.WriteLine("Vous n'êtes pas dans nôtre registre"/*, veuillez recommencer ; votre prenom :"*/);
+                }
+                return UserAgree(users, null);
+            }
+        }
+        class Keys
+        {
+            List<string> listKeys = new List<string> { "root", "toor", "admin" };
+            string yokey = Console.ReadLine();
+            public string UserEntry(string yokey)
+            {
+                Console.WriteLine("Votre mdp ?");
+                return UserEntry(yokey);
+            }
+            public string UserAgree(string users, string youser)
+            {
+                if (youser != users)
+                {
+                    Console.WriteLine("Vous n'êtes pas dans nôtre registre"/*, veuillez recommencer ; votre prenom :"*/);
+                }
+                return UserAgree(users, null);
+            }
+        }
+
+    }
+}
+
 
 
 
